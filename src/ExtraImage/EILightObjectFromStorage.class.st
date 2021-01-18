@@ -49,9 +49,10 @@ EILightObjectFromStorage >> objectStructure [
 
 { #category : #accessing }
 EILightObjectFromStorage >> objectStructure: anObject [
-	(objectStructure isByteArray or: [ objectStructure isString ] )
-		ifTrue: [ objectStructure := NeoJSONObject fromString: anObject ]
-		ifFalse: [ objectStructure := anObject ]
+	objectStructure := ((objectStructure class == ByteArray)
+		or: [ objectStructure isString ])
+		ifTrue: ["NeoJSONObject" STON fromString: anObject ]
+		ifFalse: [ anObject ]
 ]
 
 { #category : #recovering }
@@ -72,7 +73,8 @@ EILightObjectFromStorage >> reference [
 
 { #category : #accessing }
 EILightObjectFromStorage >> reference: anObject [
-	anObject isString
+	"anObject isString
 		ifTrue: [ reference := EIUUID fromString: anObject ]
-		ifFalse: [ reference := anObject ]
+		ifFalse: [ reference := anObject ]"
+	reference := anObject asString
 ]

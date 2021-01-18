@@ -41,16 +41,16 @@ EILightReference >> initialize [
 { #category : #accessing }
 EILightReference >> value [
 	|obj ref|
-	ref := EIUUID fromString: reference.
-	obj :=(EIContextInstance value loadReference: ref) object.
+	"ref := EIUUID fromString: reference."
+	obj :=(EIContextInstance value loadReference: reference) object.
 	^ obj.
 ]
 
 { #category : #accessing }
 EILightReference >> value: anObject [
 	|ref container|
-	ref := EIUUID fromString: reference.
-	container := EIContextInstance value loadReference: ref.
+	"ref := EIUUID fromString: reference."
+	container := EIContextInstance value loadReference: reference.
 	container object: anObject.
 	EIContextInstance value
 		saveObject: container.

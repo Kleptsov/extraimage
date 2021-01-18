@@ -25,6 +25,6 @@ EIContextBuilder class >> build [
 	|ctx|
 	ctx := EIContext new.
 	ctx selector: EISelectorInstance value.
-	ctx storage: EIStorage3 new.
+	ctx storage: EIStorage2 new.
 	^ ctx
 ]

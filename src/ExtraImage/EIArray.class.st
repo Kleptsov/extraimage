@@ -43,13 +43,13 @@ EIArray >> at: anIndex put: anObject [
 	| i |
 	array at:anIndex put: anObject.
 	anObject ifNil: [ ^ self removeAt: anIndex. ].
-	monitor enter.
+	"monitor enter."
 	(map at: anIndex)
 		ifNil: [		i := index value.
 						range at: i put: anIndex.
 						map at: anIndex put: i.
 						index value: (i + 1) ].
-	monitor exit.
+	"monitor exit."
 ]
 
 { #category : #enumerating }

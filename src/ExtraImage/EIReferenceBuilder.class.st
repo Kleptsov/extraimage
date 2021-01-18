@@ -9,7 +9,7 @@ Class {
 		'selector',
 		'object'
 	],
-	#category : #'ExtraImage-JsonBuilder'
+	#category : #'ExtraImage-Core'
 }
 
 { #category : #creating }
@@ -23,16 +23,19 @@ EIReferenceBuilder class >> object: anObject selector: aSelector [
 
 { #category : #building }
 EIReferenceBuilder >> build [
-	|uuid|
+	| id |
 	object ifNil: [ ^ nil ].
 	object class = SmallInteger ifTrue: [ ^ object ].
 	object class superclass = Boolean ifTrue: [ ^ object ].
 	^ selector
 		keyAtIdentityValue: object
 		ifAbsent: [
-			uuid := EIUUID new.
+			id := EIConfiguration nextId.
+			selector at: id put: object.
+			EIID value: id.
+			"uuid := EIUUID new.
 			selector at: uuid put: object.
-			uuid yourself ]
+			uuid yourself "]
 ]
 
 { #category : #accessing }

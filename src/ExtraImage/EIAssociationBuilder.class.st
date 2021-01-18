@@ -15,13 +15,15 @@ Class {
 
 { #category : #building }
 EIAssociationBuilder >> build [
-	association key: variableName.
+	association key: variableName asString.
 	reference ifNil: [ ^ association value: nil; yourself ].
 	reference class superclass = Boolean
 		ifTrue: [ ^ association value: reference; yourself ].
 	reference class = SmallInteger
 		ifTrue: [ ^ association value: reference; yourself ].
-	reference class = EIUUID
+	"reference class = EIUUID
+		ifTrue: [ ^ association value: reference asString ]."
+	reference class = EIID
 		ifTrue: [ ^ association value: reference asString ].
 	^ Error signal: 'DictionaryRefBuilder error'.
 ]

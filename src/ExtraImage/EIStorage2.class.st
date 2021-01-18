@@ -37,7 +37,7 @@ EIStorage2 >> at: anReference [
 	|path content |
 	path := self class defaultDirectory / anReference asString.
 	content := path asFileReference readStream contents.
-	^ NeoJSONObject fromString: content asString.
+	^ "NeoJSONObject" STON fromString: content asString.
 ]
 
 { #category : #accessing }
@@ -46,9 +46,10 @@ EIStorage2 >> at: anReference put: anObjectStructure [
 	| path fileStream |
 	self mutex critical: [
 		path := self class defaultDirectory / anReference asString.
-		fileStream := (path asFileReference openWritable: true)
-							writeStream binary reset.
-		fileStream nextPutAll: (NeoJSONWriter toString: anObjectStructure).
+		"fileStream := (path asFileReference openWritable: true)
+							writeStream binary reset."
+		fileStream := path asFileReference binaryWriteStream.
+		fileStream nextPutAll: ("NeoJSONWriter" STON toString: anObjectStructure).
 		fileStream close].
 ]
 

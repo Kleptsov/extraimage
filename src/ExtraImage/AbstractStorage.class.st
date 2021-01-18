@@ -66,3 +66,8 @@ AbstractStorage >> mutex [
 	"^ mutex ifNil: [ mutex := Mutex new ]"
 	^ self class mutex.
 ]
+
+{ #category : #accessing }
+AbstractStorage >> storageCache [
+	^ EIStorageCache new store: self; yourself.
+]

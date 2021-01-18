@@ -98,9 +98,10 @@ EIObjectRecoveryFromStorage >> reference [
 
 { #category : #accessing }
 EIObjectRecoveryFromStorage >> reference: anObject [
-	anObject isString
+	"anObject isString
 		ifTrue: [ reference := EIUUID fromString: anObject ]
-		ifFalse: [ reference := anObject ]
+		ifFalse: [ reference := anObject ]"
+	reference :=anObject asString.
 ]
 
 { #category : #accessing }

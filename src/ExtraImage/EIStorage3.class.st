@@ -153,7 +153,7 @@ EIStorage3 >> at: aReference from: aStorage [
 	| fileName contents res |
 	fileName := aStorage, self config delimiter, aReference asString.
 	contents := fileName asFileReference binaryReadStream contents.
-	res := NeoJSONObject fromString: contents asString.
+	res := "NeoJSONObject" STON fromString: contents asString.
 	^ res.
 ]
 
@@ -171,7 +171,7 @@ EIStorage3 >> at: aReference put: anObjectStructure [
 EIStorage3 >> at: aReference put: anObjectStructure to: aStorage [
 	| fileName byteArray |
 	fileName := aStorage, self config delimiter, aReference asString.
-	byteArray := (NeoJSONWriter toString: anObjectStructure) asByteString asByteArray.
+	byteArray := ("NeoJSONWriter"STON toString: anObjectStructure) asByteString asByteArray.
 	self atFile: fileName put: byteArray.
 	
 ]

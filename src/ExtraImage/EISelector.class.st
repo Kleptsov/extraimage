@@ -35,14 +35,20 @@ EISelector class >> resetInstance [
 { #category : #accessing }
 EISelector >> at: aReference ifAbsent: aBlock [
 	| ref |
-	ref := EIUUID from: aReference.
+	ref := aReference isString
+		ifTrue: [ Number readFrom: aReference ]
+		ifFalse: [ aReference asNumber ].
 	^ selector at: ref ifAbsent: aBlock.
+	"ref := EIUUID from: aReference.
+	^ selector at: ref ifAbsent: aBlock."
 ]
 
 { #category : #accessing }
 EISelector >> at: aReference put: anObject [
-	selector at: (EIUUID from: aReference) put: anObject
-	
+	| ref |
+	ref := aReference asNumber.
+	selector at: ref put: anObject
+	"selector at: (EIUUID from: aReference) put: anObject"
 ]
 
 { #category : #initialize }

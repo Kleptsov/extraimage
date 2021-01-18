@@ -19,7 +19,9 @@ Class {
 	#superclass : #Object,
 	#classInstVars : [
 		'clientId',
-		'writeId'
+		'writeId',
+		'imageId',
+		'nextId'
 	],
 	#category : #'ExtraImage-Config'
 }
@@ -32,6 +34,11 @@ EIConfiguration class >> commonConfigFile [
 { #category : #accessing }
 EIConfiguration class >> delimiter [
 	^ DiskStore delimiter asString.
+]
+
+{ #category : #accessing }
+EIConfiguration class >> imageId [
+	^ imageId ifNil: [ imageId := 1000000 atRandom ]
 ]
 
 { #category : #accessing }
@@ -52,6 +59,17 @@ EIConfiguration class >> localConfigPath [
 { #category : #accessing }
 EIConfiguration class >> localStorage [
 	^ 'extra'
+]
+
+{ #category : #accessing }
+EIConfiguration class >> nextId [
+	nextId ifNil: [ nextId := self imageId * 1000000000 ].
+	^ nextId := nextId + 1.
+]
+
+{ #category : #accessing }
+EIConfiguration class >> referenceOf: anObject index: anIndex [
+	^ anObject asNumber * 10000000000 + anIndex asNumber.
 ]
 
 { #category : #accessing }

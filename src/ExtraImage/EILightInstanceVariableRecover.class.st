@@ -55,7 +55,7 @@ EILightInstanceVariableRecover >> recoveredObject: anObject [
 { #category : #recovering }
 EILightInstanceVariableRecover >> recovery [
 	| val t|
-	(variableValue = nil or: [ variableValue = true or: [ variableValue = false or: [ variableValue class = SmallInteger ] ] ])
+	(variableValue = nil or: [ variableValue or: [ variableValue not or: [ variableValue class = SmallInteger ] ] ])
 			ifTrue: [ recoveredObject instVarAt: variableName put: variableValue ].
 	t := EILightObjectFromStorage new
 				context: context;
