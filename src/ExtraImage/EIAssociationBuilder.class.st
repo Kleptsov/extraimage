@@ -1,7 +1,3 @@
-"
-Создаетс ассоциацию вида aVarName -> aEIUUID.
-Экземпляры Nil, Boolean, SmallInteger сохраняются по значению вместо EIUUID ссылки
-"
 Class {
 	#name : #EIAssociationBuilder,
 	#superclass : #Object,

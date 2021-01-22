@@ -1,7 +1,3 @@
-"
-Создает или возвращает uuid ссылку на объект.
-У экземпляров Nil, SmallInteger, Boolean вместо ссылки возвращается сам объект
-"
 Class {
 	#name : #EIReferenceBuilder,
 	#superclass : #Object,

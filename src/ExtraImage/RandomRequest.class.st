@@ -1,25 +1,3 @@
-"
-Запрос на случайный адрес, если успешно записывается в базу
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	request:		<Object>
-	response:		<Object>
-	timeout:		<Object>
-	url:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #RandomRequest,
 	#superclass : #Object,

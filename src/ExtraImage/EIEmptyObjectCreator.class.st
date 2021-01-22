@@ -1,24 +1,3 @@
-"
-Creates empty object without static and indexed variables.
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	cls:		<Object>
-	indexSize:		<Object>
-	objectStructure:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EIEmptyObjectCreator,
 	#superclass : #Object,

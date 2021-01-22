@@ -1,24 +1,3 @@
-"
-Хранилище с репликацией
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	mutex:		<Object>
-	onlyWrite:		<Object>
-	readAndWrite:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EIStorage3,
 	#superclass : #AbstractStorage,
@@ -107,7 +86,7 @@ EIStorage3 class >> loadCommonConfig [
 	[ 
 			commonConfigFullName asFileReference exists ifFalse: [ FileDoesNotExistException signal ].
 			jsonConfig := commonConfigFullName asFileReference readStream contents.
-			^ readAndWrite := (NeoJSONObject fromString: jsonConfig) asOrderedCollection.
+			^ readAndWrite := (STON fromString: jsonConfig) asOrderedCollection.
 	] on: FileDoesNotExistException do: [ :ex|
 				self createCommonConfigDirectory.
 				self createCommonConfigFile.

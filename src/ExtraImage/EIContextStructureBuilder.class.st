@@ -1,7 +1,3 @@
-"
-Создает структуру для экземпляра Context.
-У Context сохраняется только ссылка 
-"
 Class {
 	#name : #EIContextStructureBuilder,
 	#superclass : #Object,

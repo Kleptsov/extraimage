@@ -1,22 +1,3 @@
-"
-простой массив, может только записывать и читать по определенному индексу.  Возможность выборки отсутствует
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	id:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EISimpleArray,
 	#superclass : #EICollection,

@@ -1,11 +1,3 @@
-"
-Создает словарь структурированных объектов вида
-{ 
-aEIUUID -> { <json структура объекта> } asDictionary
-...
-....
- } asDictionary
-"
 Class {
 	#name : #EIAllObjectStructureBuilder,
 	#superclass : #Object,

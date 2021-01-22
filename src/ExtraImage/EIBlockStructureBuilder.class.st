@@ -1,7 +1,3 @@
-"
-Создает структуру BlockClosure.
-В структуре сохраняется только ссылка.
-"
 Class {
 	#name : #EIBlockStructureBuilder,
 	#superclass : #Object,

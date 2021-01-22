@@ -1,14 +1,3 @@
-"
-I represent a selector of the saved objects.
-
-Public API and Key Messages
-- at: anId put: anObject
--  keyAtValue: anObject
-
- Instance Variables
-	counter:		 
-	selector:		
-"
 Class {
 	#name : #EISelector,
 	#superclass : #Object,

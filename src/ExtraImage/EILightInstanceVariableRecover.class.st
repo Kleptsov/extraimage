@@ -1,25 +1,3 @@
-"
-Легкое восстановление переменных. Объекты переменных востанавливаются поверхносно.
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	context:		<Object>
-	recoveredObject:		<Object>
-	variableName:		<Object>
-	variableValue:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EILightInstanceVariableRecover,
 	#superclass : #Object,

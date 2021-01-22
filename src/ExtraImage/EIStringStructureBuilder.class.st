@@ -1,6 +1,3 @@
-"
-Создает структуру ByteString
-"
 Class {
 	#name : #EIStringStructureBuilder,
 	#superclass : #Object,

@@ -1,22 +1,3 @@
-"
-Конвертирует из шестнадцатиричной кодировки сначала в UTF8 и далее в WideString.
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	converter:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EIHexToWideString,
 	#superclass : #Object,

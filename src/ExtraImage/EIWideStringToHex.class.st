@@ -1,19 +1,3 @@
-"
-Конвертер WideString в UTF8 и далее в шестнадцатиричную кодировку
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-
-    Implementation Points
-"
 Class {
 	#name : #EIWideStringToHex,
 	#superclass : #Object,

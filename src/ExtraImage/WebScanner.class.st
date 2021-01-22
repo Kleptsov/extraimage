@@ -1,25 +1,3 @@
-"
-Простая программа для сканирования веб-пространства интернета
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	block:		<Object>
-	count:		<Object>
-	hz:		<Object>
-	processes:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #WebScanner,
 	#superclass : #Object,

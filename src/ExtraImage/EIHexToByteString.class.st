@@ -1,23 +1,3 @@
-"
-Конвертирует шестнадцатиричное представление в ByteString
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-пример EIHexToByteString new hexString: '616263'; build. <'abc'>
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	hexString:		<Object>
-	res:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EIHexToByteString,
 	#superclass : #Object,

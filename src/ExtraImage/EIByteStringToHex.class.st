@@ -1,23 +1,3 @@
-"
-Конвертирует ByteString в шестнадцатиричное представление. 
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-    Instance Variables
-	res:		<Object>
-	string:		<Object>
-
-
-    Implementation Points
-"
 Class {
 	#name : #EIByteStringToHex,
 	#superclass : #Object,

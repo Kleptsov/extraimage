@@ -1,6 +1,3 @@
-"
-Создает структуру WideString
-"
 Class {
 	#name : #EIWideStringStructureBuilder,
 	#superclass : #Object,

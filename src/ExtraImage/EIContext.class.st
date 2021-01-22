@@ -1,8 +1,3 @@
-"
-A Context contains references to selector and storage.  It helps to load and unload objects.
-
-
-"
 Class {
 	#name : #EIContext,
 	#superclass : #Object,

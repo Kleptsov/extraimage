@@ -1,6 +1,3 @@
-"
-Создает ссылку на индексированные переменные
-"
 Class {
 	#name : #EIArrayRefBuilder,
 	#superclass : #Object,

@@ -1,7 +1,3 @@
-"
-Создает структуру для всех типов объектов, кроме экземпляров Nil, Boolean, SmallInteger.
-Может возбуждать исключительную ситуацию EIDoesNotCreateStructureExcepton
-"
 Class {
 	#name : #EIObjectStructureBuilder,
 	#superclass : #Object,
