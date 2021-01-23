@@ -6,7 +6,7 @@ Class {
 		'cls',
 		'indexSize'
 	],
-	#category : #'ExtraImage-Recovery'
+	#category : #'ExtraImage-Recovery2'
 }
 
 { #category : #operations }

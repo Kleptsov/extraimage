@@ -11,7 +11,7 @@ Class {
 		'indReferences',
 		'object'
 	],
-	#category : #'ExtraImage-Recovery'
+	#category : #'ExtraImage-Recovery2'
 }
 
 { #category : #recovering }
